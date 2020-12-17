@@ -8,8 +8,8 @@ class EditUser extends LitElement {
     };
   }
 
-  //Render html by JS. Contains a user form with mailadresse (uid), fornavn, etternavn, gammelt passord
-  //and nytt passord. The page contains a form where the user can edit their corresponding user data.
+  /*Render html by JS. Contains a user form with mailadresse (uid), fornavn, etternavn, gammelt passord
+  and nytt passord. The page contains a form where the user can edit their corresponding user data.*/
   render() {
     return html`
     <head>
@@ -37,7 +37,7 @@ class EditUser extends LitElement {
       <label for="newpwd">Nytt passord:</label>
       <input type="password" class="form-control" id="pwd" name="pwd" type="text" value="">
   </div>
-  <input type="submit" @click=${this.updateUser} id="submitForm" name="editUser" class="btn btn-info mt-4 ml-2" value="Edit User"></input>
+  <input type="submit" @click=${this.updateUser} id="submitForm" name="editUser" class="btn btn-info mt-4 ml-2" value="Rediger bruker"></input>
 </form>
     `;
   }
@@ -45,11 +45,11 @@ class EditUser extends LitElement {
   //Updating data on user
   updateUser(err) {
     //Data fetched from the HTML-file
-    const dataForm = new FormData(e.target.form);
+    const dataForma = new FormData(err.target.form);
     console.log(err)
     fetch('api/updateUser.php', {
      method: 'POST',
-     body: dataForm
+     body: dataForma
     }).then(res=>res.json())
       .then(data=>{
         if (data.status=='Success') {
