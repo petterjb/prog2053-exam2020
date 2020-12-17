@@ -14,4 +14,4 @@ I denne oppgaven skal du lage samme funksjonaliteten med web komponenter. I file
 
 NB, i oppgave/www/node_modules ligger lit-element med de endringer som skal til for at det fungerer uten å bruke "polymer serve" (dvs, koden fungerer direkte i docker/XAMPP).
 
-SVAR: The answer is in oppgave3.html,, uses fetch-user it uses www/js/edit-user.js to edit an user
+SVAR: The answer is in oppgave3.html. Edited code is in www/js/components/edit-user.js and makes it possible to edit user data.
