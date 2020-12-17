@@ -52,7 +52,7 @@ class EditUser extends LitElement {
      body: dataForma
     }).then(res=>res.json())
       .then(data=>{
-        if (data.status=='Success') {
+        if (data.status=='success') {
             console.log("User data was updated");
         } else {
             console.log("The user data was not updated");
